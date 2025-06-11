@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .quote-box {
+      font-family: Georgia, serif;
+      font-size: 1.2rem;
+      border-left: 4px solid #0078D4;
+      padding-left: 1em;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-box" id="quote"></div>
+
+  <script>
+    const quotes = [
+      "You miss 100% of the shots you don’t take. – Wayne Gretzky",
+      "Be yourself; everyone else is already taken. – Oscar Wilde",
+      "The only way to do great work is to love what you do. – Steve Jobs",
+      "It’s a good day to have a good day. – Unknown",
+      "The best way to predict the future is to invent it. – Alan Kay"
+    ];
+
+    const today = new Date();
+    const index = today.getDate() % quotes.length;
+    document.getElementById("quote").innerText = quotes[index];
+  </script>
+</body>
+</html>
